@@ -82,14 +82,15 @@ const spin = () => {
          const randomIndex = Math.floor(Math.random() * reelSymbols.length);
          const selectedSymbol = reelSymbols[randomIndex];
          reels[i].push(selectedSymbol);
-         reelsSymbols.splice(randomIndex, 1);
+         reelSymbols.splice(randomIndex, 1);
       }
    }
 
    return reels;
 };
 
-
+const reels = spin();
+console.log(reels);
 let balance = deposit();
 const numberOfLines = getNumberOfLines();
 const bet = getBet(balance, numberOfLines);
